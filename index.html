@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo Virtual para Marianita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #f8c8dc, #e8c9f7, #ffffff);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8em;
+            color: #8c5e9f;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f6d0e3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #ff99cc;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        iframe {
+            border: none;
+            margin-top: 30px;
+            border-radius: 12px;
+        }
+
+        footer {
+            font-size: 1.2em;
+            margin-top: 30px;
+            color: #8c5e9f;
+        }
+
+        .carousel {
+            font-size: 1.3em;
+            font-style: italic;
+            color: #7b3f61;
+            margin-top: 30px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .images {
+            margin-top: 40px;
+        }
+
+        .images img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mi mar, mi chiquita preciosa, Marianita 💜</h1>
+
+        <div class="carousel" id="carousel"></div>
+
+        <div class="card">
+            <p>Antes de que empieces a estudiar, respira hondo y recuerda que puedes con todo.  
+                Eres fuerte, eres capaz, y eres muchísimo más brillante de lo que tú misma te das cuenta.</p>
+            <p>Este examen no es más grande que tú; tú eres más grande que cualquier reto.  
+                Y si tú crees que no puedes, entonces cree en mí, que sí lo creo con todo mi corazón.</p>
+            <p>Por eso hice esto para ti (espero me salga bien 😔):  
+                un pequeño rincón virtual, un kit, una carta y algo más que se me ocurra, todo con amorcito,  
+                para que sientas mi abrazo aunque no esté contigo físicamente.</p>
+            <p>Yo te acompaño en cada hoja que leas, en cada ejercicio que resuelvas.  
+                Estoy contigo en pensamiento, en energía, en alma.  
+                Yo sé que tú puedes. Y no solo puedes: vas a lograrlo.</p>
+            <p>Te amo con todo lo que soy, y siempre voy a estar aquí, impulsándote hasta que el mundo vea lo que yo ya veo en ti.</p>
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8kL5Sb40mgg?autoplay=1" allowfullscreen></iframe>
+
+        <p>Para acceder a tu Kit de examen, haz clic aquí:</p>
+        <a href="https://drive.google.com/drive/folders/1Qv1GCFe1W_O-0qFt4QRitCW_m4GqtXfy?usp=sharing" class="button">Acceder al Kit</a>
+
+        <div class="images">
+            <img src="images/foto_acuario.jpg" alt="Acuario 1">
+            <img src="images/foto_acuario_2.jpg" alt="Acuario 2">
+            <img src="images/ojitos.jpg" alt="Ojitos">
+            <img src="images/linda.jpg" alt="Linda">
+        </div>
+
+        <footer>
+            <p>Con todo mi amor, <br> Carlos Sánchez Alejo 💛</p>
+        </footer>
+    </div>
+
+    <script>
+        const phrases = [
+            "Estoy orgulloso de ti, mi mar",
+            "Te amo con todas mis almas",
+            "Milochomil besos y abrazos",
+            "Tú puedes con todo, confía en ti",
+            "Eres el amor de mi vida",
+            "Confía en ti como yo confío en ti 🫶",
+            "El IPN no sabe la suerte que tiene de tenerte ✨",
+            "Te veo esforzarte y te admiro cada día más",
+            "Estoy contigo aunque no esté cerca físicamente"
+        ];
+
+        let index = 0;
+        const carousel = document.getElementById('carousel');
+
+        function showPhrase() {
+            carousel.textContent = phrases[index];
+            index = (index + 1) % phrases.length;
+        }
+
+        showPhrase();
+        setInterval(showPhrase, 4000);
+    </script>
+
+</body>
+</html>
